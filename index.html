@@ -33,24 +33,6 @@
             }
         }
     </script>
-    <!-- CrazyGames SDK - Loaded with error handling -->
-    <script>
-        // Check if we're running locally from the file system
-        const isLocalFile = window.location.protocol === 'file:';
-        
-        // Only load the SDK if not running locally
-        if (!isLocalFile) {
-            // Create script element
-            const sdkScript = document.createElement('script');
-            sdkScript.src = "https://sdk.crazygames.com/crazygames-sdk-v2.js";
-            sdkScript.onerror = function() {
-                console.error("Failed to load CrazyGames SDK");
-            };
-            document.head.appendChild(sdkScript);
-        } else {
-            console.log("Running locally - CrazyGames SDK not loaded");
-        }
-    </script>
 </head>
 <body class="bg-apple-gray-light dark:bg-apple-gray-dark text-gray-800 dark:text-white font-sans">
     <header class="bg-apple-blue text-white shadow-lg">
@@ -104,14 +86,8 @@
         <section id="play" class="my-16 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
             <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-green">Play Count Masters: Stickman Games</h2>
             <div class="game-container w-full h-96 md:h-[550px] relative">
-                <!-- Game will be loaded here by the SDK -->
-                <div id="game"></div>
-                <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-800">
-                    <div class="text-center">
-                        <p class="text-xl font-bold text-apple-blue mb-4">Loading Game...</p>
-                        <div class="loader mx-auto"></div>
-                    </div>
-                </div>
+                <!-- Game embedded using iframe -->
+                <iframe src="https://www.crazygames.com/embed/count-masters-stickman-games" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
             </div>
             <div class="mt-6">
                 <p class="text-center text-sm text-gray-600 dark:text-gray-400">
