@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Stickman Games Online - Play Count Masters Stickman Games</title>
+    <meta name="description" content="Play the best Stickman games online. Count Masters Stickman Games featuring thrilling gameplay and challenging levels for all players.">
+    <link rel="canonical" href="https://beststickman.online/">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            green: '#34C759',
+                            indigo: '#5856D6',
+                            orange: '#FF9500',
+                            pink: '#FF2D55',
+                            purple: '#AF52DE',
+                            red: '#FF3B30',
+                            teal: '#5AC8FA',
+                            yellow: '#FFCC00',
+                            gray: {
+                                light: '#F2F2F7',
+                                dark: '#1C1C1E'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- CrazyGames SDK - Loaded with error handling -->
+    <script>
+        // Check if we're running locally from the file system
+        const isLocalFile = window.location.protocol === 'file:';
+        
+        // Only load the SDK if not running locally
+        if (!isLocalFile) {
+            // Create script element
+            const sdkScript = document.createElement('script');
+            sdkScript.src = "https://sdk.crazygames.com/crazygames-sdk-v2.js";
+            sdkScript.onerror = function() {
+                console.error("Failed to load CrazyGames SDK");
+            };
+            document.head.appendChild(sdkScript);
+        } else {
+            console.log("Running locally - CrazyGames SDK not loaded");
+        }
+    </script>
+</head>
+<body class="bg-apple-gray-light dark:bg-apple-gray-dark text-gray-800 dark:text-white font-sans">
+    <header class="bg-apple-blue text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex flex-col md:flex-row items-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-0">
+                    <a href="/" class="no-underline hover:text-apple-yellow">Best Stickman Games</a>
+                </h1>
+            </div>
+            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 mt-4 md:mt-0">
+                <a href="#about" class="hover:text-apple-yellow transition duration-300">About</a>
+                <a href="#play" class="hover:text-apple-yellow transition duration-300">Play Game</a>
+                <a href="#features" class="hover:text-apple-yellow transition duration-300">Features</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="hero" class="flex flex-col items-center justify-center text-center my-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-apple-blue">Count Masters: Stickman Games</h2>
+            <p class="text-lg max-w-2xl mb-8">
+                Experience the thrilling world of stickman gaming with Count Masters. Join thousands of players in this addictive and challenging gameplay that combines strategy and action.
+            </p>
+            <div class="mt-4">
+                <a href="#play" class="bg-apple-blue hover:bg-apple-teal text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Play Now</a>
+            </div>
+        </section>
+
+        <section id="about" class="my-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-purple">About Stickman Games</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <p class="mb-4">
+                        Stickman games have become one of the most popular casual gaming genres worldwide. With their simple yet captivating graphics and addictive gameplay, these games provide hours of entertainment for players of all ages.
+                    </p>
+                    <p class="mb-4">
+                        Count Masters: Stickman Games takes the genre to a new level with its innovative approach to stickman-based action. In this game, you control an army of stickmen that grows or shrinks based on your strategic decisions and reflexes.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <p class="mb-4">
+                        The objective is simple: build your army by collecting as many stickmen as possible while navigating through various obstacles and defeating enemies along the way. The more stickmen you have, the stronger your force becomes.
+                    </p>
+                    <p class="mb-4">
+                        With its intuitive controls and escalating difficulty, Count Masters offers a perfect balance of casual fun and challenging gameplay that keeps players coming back for more.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="play" class="my-16 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-green">Play Count Masters: Stickman Games</h2>
+            <div class="game-container w-full h-96 md:h-[550px] relative">
+                <!-- Game will be loaded here by the SDK -->
+                <div id="game"></div>
+                <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-800">
+                    <div class="text-center">
+                        <p class="text-xl font-bold text-apple-blue mb-4">Loading Game...</p>
+                        <div class="loader mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="text-center text-sm text-gray-600 dark:text-gray-400">
+                    This game is provided by CrazyGames. Enjoy the full experience on our website!
+                </p>
+            </div>
+        </section>
+
+        <section id="features" class="my-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-10 text-apple-orange">Game Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-blue">Addictive Gameplay</h3>
+                    <p>Simple controls with complex strategy make this game easy to learn but challenging to master. Build your army and overcome obstacles.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-red">Multiple Levels</h3>
+                    <p>Progress through numerous challenging levels, each with unique obstacles and enemies that will test your strategic thinking.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-green">Dynamic Growth</h3>
+                    <p>Watch your stickman army grow and shrink in real-time as you navigate through gates and battle enemy forces.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-purple">Epic Boss Battles</h3>
+                    <p>Face off against powerful bosses at the end of each stage, requiring strategy and timing to defeat them with your stickman army.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-teal">Mobile Friendly</h3>
+                    <p>Enjoy smooth gameplay on both desktop and mobile devices with responsive controls optimized for touch screens.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-4 text-apple-yellow">Free to Play</h3>
+                    <p>Experience the full game for free with no hidden costs. Just jump in and start building your stickman army right away.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="my-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-teal">How to Play Count Masters</h2>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <ol class="list-decimal pl-6 space-y-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Controls:</span> Use mouse or touchscreen to move your stickman army left and right across the path.
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Building Your Army:</span> Run through gates with "+" signs to multiply your stickmen or numbers to add that specific amount.
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Avoiding Losses:</span> Be careful of gates with "-" signs or division symbols as they will reduce your army size.
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Battles:</span> When you encounter enemy stickmen, your armies will automatically fight. The larger army usually wins.
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Boss Fights:</span> At the end of levels, you'll face bosses. Circle around them while attacking to defeat them.
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-apple-blue text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold mb-4">Best Stickman Games Online</h2>
+                    <p>Your destination for the best stickman gaming experience on the web.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-apple-yellow transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-apple-yellow transition duration-300">About</a></li>
+                        <li><a href="#play" class="hover:text-apple-yellow transition duration-300">Play Game</a></li>
+                        <li><a href="#features" class="hover:text-apple-yellow transition duration-300">Features</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blue-700 text-sm text-center">
+                <p>&copy; 2023 BestStickman.online - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
