@@ -1,39 +1,46 @@
-# Stickman Games Website
+# BestGames Online - Indie Games Collection
 
-A responsive website for Stickman games, specifically featuring Count Masters Stickman Games using the CrazyGames SDK.
+A responsive website showcasing the best indie games from talented independent developers, featuring games from itch.io and other indie platforms.
 
 ## Features
 
 - Responsive design for both desktop and mobile devices
-- Integration with CrazyGames SDK for legal game embedding
+- Integration with itch.io for indie game embedding
 - Apple-inspired color scheme
 - Dark mode support
 - Smooth scrolling and animations
 - SEO optimized with proper meta tags and structured data
+- Focus on supporting independent game developers
+
+## Current Games
+
+- **Podvodsk (Ludum Dare 57)** - An innovative indie game by Four Quarters team
+- More curated indie games coming soon!
 
 ## Files
 
 - `index.html` - Main HTML file with website content
 - `styles.css` - Custom CSS styles beyond Tailwind
-- `script.js` - JavaScript functionality with CrazyGames SDK integration
+- `script.js` - JavaScript functionality for smooth interactions
 - `robots.txt` - Instructions for search engine crawlers
 - `sitemap.xml` - XML sitemap for search engines
+- `games/podvodsk.html` - Individual game page for Podvodsk
 
-## CrazyGames SDK Integration
+## Indie Game Platform Integration
 
-This website uses the official CrazyGames SDK to legally embed games from CrazyGames. The SDK provides:
+This website focuses on showcasing indie games from various platforms:
 
-- Legal embedding of games
-- Ad management
-- Analytics
-- Game loading and error handling
+- **itch.io integration** - Embedding games from the leading indie game platform
+- **Developer support** - Direct links to game creators and their pages
+- **Curated selection** - Hand-picked games that represent the best of indie gaming
+- **Diverse genres** - From experimental games to traditional genres with indie twists
 
 ## Technologies Used
 
 - HTML5
 - CSS3 with Tailwind CSS (via CDN)
 - Vanilla JavaScript
-- CrazyGames SDK v2
+- itch.io embed integration
 - Responsive design techniques
 
 ## Getting Started
@@ -45,11 +52,20 @@ This website uses the official CrazyGames SDK to legally embed games from CrazyG
 
 This website is designed to be deployed to the domain `beststickman.online`.
 
+## Supporting Indie Developers
+
+Our mission is to:
+- Showcase unique and creative indie games
+- Drive traffic to indie developers' pages
+- Support the indie gaming community
+- Provide a platform for discovering hidden gems
+
 ## SEO Features
 
 - Canonical URL
-- Meta description
+- Meta description optimized for indie games
 - Proper heading structure with H1 and H2 tags
 - Mobile responsive
 - Sitemap
-- Robots.txt 
+- Robots.txt
+- Focus on indie game keywords and discoverability 
