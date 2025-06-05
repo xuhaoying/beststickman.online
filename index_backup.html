@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestGames Online - Free Indie Games Collection | Play Online Games</title>
     <meta name="description" content="Play the best free indie games online. Discover action, puzzle, strategy, adventure games and more. No downloads required - play instantly in your browser!">
-    <meta name="keywords" content="free games, indie games, online games, browser games, puzzle games, action games, strategy games, adventure games">
-    <link rel="canonical" href="https://beststickman.online/">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -18,86 +16,6 @@
             margin: 0 !important;
             padding: 0 !important;
             min-height: 100vh !important;
-        }
-        
-        /* 导航玻璃效果 */
-        .nav-glass {
-            background: rgba(255, 255, 255, 0.25) !important;
-            backdrop-filter: blur(15px) !important;
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
-        }
-        
-        /* 按钮样式 */
-        .btn-primary {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%) !important;
-            color: white !important;
-            padding: 14px 28px !important;
-            border-radius: 12px !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            font-weight: 600 !important;
-            transition: all 0.3s ease !important;
-            border: none !important;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 15px 25px rgba(59, 130, 246, 0.4) !important;
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1) !important;
-            color: #1e293b !important;
-            padding: 14px 28px !important;
-            border-radius: 12px !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            font-weight: 600 !important;
-            border: 1px solid rgba(59, 130, 246, 0.3) !important;
-        }
-        
-        /* 玻璃卡片 */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.2) !important;
-            backdrop-filter: blur(15px) !important;
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
-            border-radius: 20px !important;
-            overflow: hidden !important;
-            transition: all 0.3s ease !important;
-        }
-        
-        .glass-card:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        /* 英雄区域 */
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        }
-        
-        /* 导航项 */
-        .nav-item {
-            color: #1e293b !important;
-            text-decoration: none !important;
-            padding: 12px 20px !important;
-            border-radius: 10px !important;
-            transition: all 0.3s ease !important;
-            font-weight: 500 !important;
-        }
-        
-        .nav-item:hover {
-            background: rgba(59, 130, 246, 0.1) !important;
-            color: #3b82f6 !important;
-            transform: translateY(-2px) !important;
-        }
-        
-        /* 文本渐变 */
-        .text-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            background-clip: text !important;
         }
     </style>
 </head>
@@ -123,7 +41,7 @@
     <main class="container mx-auto px-6 py-12">
         <!-- Hero Section -->
         <section class="hero-gradient text-center py-20 rounded-3xl mb-16 text-white">
-            <h2 class="text-5xl font-bold mb-8">Discover Extraordinary Games</h2>
+            <h2 class="heading-large mb-8">Discover Extraordinary Games</h2>
             <p class="text-xl mb-12 max-w-3xl mx-auto">
                 Immerse yourself in carefully curated indie masterpieces from visionary developers worldwide.
             </p>
@@ -135,7 +53,7 @@
 
         <!-- Featured Games -->
         <section id="featured" class="mb-16">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">🎮 Featured Games</h2>
+            <h2 class="heading-medium text-center mb-12 text-gradient">🎮 Featured Games</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Podvodsk -->
@@ -175,7 +93,7 @@
         </section>
     </main>
 
-    <footer class="py-12" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px);">
+    <footer class="footer-glass py-12">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-2xl font-bold mb-4 text-gradient">🎮 BestGames Online</h2>
             <p class="text-gray-600 mb-6">Your destination for indie games</p>
@@ -184,7 +102,7 @@
     </footer>
 
     <script>
-        console.log('BestGames Online loaded successfully!');
+        console.log('BestGames Online loaded!');
         
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - BestGames Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .game-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎮 BestGames Online</h1>
+            <nav>
+                <a href="/">Home</a> | 
+                <a href="/categories/">Categories</a> | 
+                <a href="/trending/">Trending</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h2>Welcome to BestGames Online</h2>
+            <p>Discover amazing indie games from talented developers</p>
+            <a href="#games" class="btn">Explore Games</a>
+        </section>
+        
+        <section id="games">
+            <h2>Featured Games</h2>
+            
+            <div class="game-card">
+                <h3>🌊 Podvodsk</h3>
+                <p>Award-winning adventure game that won Ludum Dare 57</p>
+                <a href="/games/podvodsk/" class="btn">Play Now</a>
+            </div>
+            
+            <div class="game-card">
+                <h3>🎃 Misty Hollow</h3>
+                <p>Spooky Halloween multiplayer experience with friends</p>
+                <a href="/games/mistyhollow/" class="btn">Join Game</a>
+            </div>
+        </section>
+        
+        <footer class="header" style="margin-top: 40px;">
+            <p>&copy; 2024 BestGames Online - Your destination for indie games</p>
+        </footer>
+    </div>
+    
+    <script>
+        console.log('Test page loaded successfully!');
+        
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
