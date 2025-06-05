@@ -72,10 +72,53 @@
                 </div>
                 
                 <!-- Game Container -->
-                <div class="game-container w-full bg-black relative rounded-lg overflow-hidden mb-8 flex items-center justify-center" style="min-height: 400px;">
-                    <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/3456241" class="max-w-full">
-                        <a href="https://fourquarters.itch.io/podvodsk">Podvodsk (Ludum Dare 57) by Four Quarters team, kartonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnyi</a>
+                <div class="game-container w-full bg-black relative rounded-lg overflow-hidden mb-8" style="min-height: 600px;">
+                    <!-- 主要游戏iframe -->
+                    <iframe id="game-iframe"
+                        src="about:blank" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr"
+                        class="w-full h-full hidden"
+                        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation">
                     </iframe>
+                    
+                    <!-- 游戏启动界面 -->
+                    <div id="game-launcher" class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-apple-purple to-apple-blue">
+                        <div class="text-center text-white p-8">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold mb-2">Podvodsk</h3>
+                                <p class="text-lg opacity-90">Ludum Dare 57</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <button id="play-embedded" class="bg-white text-apple-purple px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300 block w-full">
+                                    🎮 Play in Browser
+                                </button>
+                                
+                                <button id="play-fullpage" class="bg-apple-teal text-white px-6 py-3 rounded-lg font-bold hover:bg-teal-600 transition duration-300 block w-full">
+                                    🖥️ Play Full Page
+                                </button>
+                                
+                                <a href="https://fourquarters.itch.io/podvodsk" target="_blank" 
+                                   class="bg-apple-orange text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-600 transition duration-300 block">
+                                    🔗 Play on itch.io
+                                </a>
+                            </div>
+                            
+                            <p class="text-sm opacity-75 mt-4">
+                                For the best experience, we recommend playing on itch.io
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div id="fullscreen-btn" class="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded cursor-pointer transition duration-300 hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                        </svg>
+                    </div>
                 </div>
                 
                 <!-- Game Description -->
@@ -93,25 +136,44 @@
                 </div>
                 
                 <!-- How to Play -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-apple-teal">How to Play</h2>
-                    <ol class="list-decimal pl-6 space-y-4">
-                        <li class="mb-2">
-                            <span class="font-semibold">Getting Started:</span> Click on the game embed above to start playing directly in your browser.
-                        </li>
-                        <li class="mb-2">
-                            <span class="font-semibold">Controls:</span> Use keyboard controls as indicated in the game. Most interactions can be performed with arrow keys and spacebar.
-                        </li>
-                        <li class="mb-2">
-                            <span class="font-semibold">Objective:</span> Follow the in-game instructions and story progression to complete your objectives.
-                        </li>
-                        <li class="mb-2">
-                            <span class="font-semibold">Exploration:</span> Take time to explore the game world and discover hidden elements and storylines.
-                        </li>
-                        <li class="mb-2">
-                            <span class="font-semibold">Full Experience:</span> For the complete experience, you can also visit the game's itch.io page for additional content and developer updates.
-                        </li>
-                    </ol>
+                <div class="bg-gray-800 p-6 rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-apple-blue mb-4">🎮 How to Play</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-apple-teal mb-2">Game Launch Options</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <li><strong>Play in Browser:</strong> Launch the game embedded on this page</li>
+                                <li><strong>Play Full Page:</strong> Open the game in a new tab for maximum screen space</li>
+                                <li><strong>Play on itch.io:</strong> Visit the original page for the best experience</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-apple-teal mb-2">Controls & Gameplay</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <li><strong>Mouse:</strong> Click to interact with puzzle elements</li>
+                                <li><strong>Keyboard:</strong> Use arrow keys or WASD for movement</li>
+                                <li><strong>Fullscreen:</strong> Press 'F' key or click the fullscreen button</li>
+                                <li><strong>Exit:</strong> Press 'ESC' to return to game selection</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-apple-teal mb-2">Game Tips</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <li>Take your time to observe the underwater environment</li>
+                                <li>Look for interactive elements and hidden clues</li>
+                                <li>Experiment with different approaches to solve puzzles</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-apple-teal mb-2">Support Developers</h4>
+                            <p class="text-gray-300">
+                                If you enjoy this game, consider visiting the 
+                                <a href="https://fourquarters.itch.io/podvodsk" target="_blank" class="text-apple-blue hover:text-apple-purple">
+                                    itch.io page
+                                </a> to support the developers and discover more of their work!
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Game Features -->
@@ -218,5 +280,103 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameIframe = document.getElementById('game-iframe');
+            const gameLauncher = document.getElementById('game-launcher');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const playEmbeddedBtn = document.getElementById('play-embedded');
+            const playFullPageBtn = document.getElementById('play-fullpage');
+            
+            // 播放选项
+            const gameUrls = {
+                embedded: 'https://fourquarters.itch.io/podvodsk/embed',
+                fullpage: 'https://fourquarters.itch.io/podvodsk'
+            };
+            
+            // 在浏览器中播放（嵌入模式）
+            playEmbeddedBtn.addEventListener('click', function() {
+                loadGame(gameUrls.embedded);
+            });
+            
+            // 全页面播放
+            playFullPageBtn.addEventListener('click', function() {
+                window.open(gameUrls.fullpage, '_blank');
+            });
+            
+            // 加载游戏函数
+            function loadGame(url) {
+                gameLauncher.style.display = 'none';
+                gameIframe.style.display = 'block';
+                gameIframe.src = url;
+                fullscreenBtn.style.display = 'block';
+                
+                // 添加加载状态
+                const loadingDiv = document.createElement('div');
+                loadingDiv.id = 'loading-indicator';
+                loadingDiv.className = 'absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white';
+                loadingDiv.innerHTML = `
+                    <div class="text-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+                        <p>Loading game...</p>
+                    </div>
+                `;
+                gameIframe.parentNode.appendChild(loadingDiv);
+                
+                // 游戏加载完成
+                gameIframe.addEventListener('load', function() {
+                    const loadingIndicator = document.getElementById('loading-indicator');
+                    if (loadingIndicator) {
+                        loadingIndicator.remove();
+                    }
+                });
+                
+                // 错误处理
+                gameIframe.addEventListener('error', function() {
+                    const loadingIndicator = document.getElementById('loading-indicator');
+                    if (loadingIndicator) {
+                        loadingIndicator.innerHTML = `
+                            <div class="text-center text-red-400">
+                                <p class="mb-4">Failed to load the game.</p>
+                                <a href="${gameUrls.fullpage}" target="_blank" class="bg-apple-orange text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-300">
+                                    Play on itch.io instead
+                                </a>
+                            </div>
+                        `;
+                    }
+                });
+            }
+            
+            // 全屏功能
+            fullscreenBtn.addEventListener('click', function() {
+                if (gameIframe.requestFullscreen) {
+                    gameIframe.requestFullscreen();
+                } else if (gameIframe.webkitRequestFullscreen) {
+                    gameIframe.webkitRequestFullscreen();
+                } else if (gameIframe.msRequestFullscreen) {
+                    gameIframe.msRequestFullscreen();
+                }
+            });
+            
+            // 键盘快捷键支持
+            document.addEventListener('keydown', function(e) {
+                // F键进入全屏
+                if (e.key === 'f' || e.key === 'F') {
+                    if (gameIframe.style.display === 'block') {
+                        e.preventDefault();
+                        fullscreenBtn.click();
+                    }
+                }
+                // Esc键返回游戏选择
+                if (e.key === 'Escape' && gameLauncher.style.display === 'none') {
+                    e.preventDefault();
+                    gameLauncher.style.display = 'flex';
+                    gameIframe.style.display = 'none';
+                    fullscreenBtn.style.display = 'none';
+                    gameIframe.src = 'about:blank';
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
