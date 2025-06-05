@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podvodsk - Ludum Dare 57 Winner | BestGames Online</title>
+    <meta name="description" content="Play Podvodsk, the award-winning Ludum Dare 57 game. Experience innovative mechanics and immersive storytelling in this critically acclaimed indie game.">
+    <meta name="keywords" content="Podvodsk, Ludum Dare 57, indie game, award-winning game, innovative gameplay, itch.io game, free online game">
+    <link rel="canonical" href="https://beststickman.online/games/podvodsk/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Podvodsk - Ludum Dare 57 Winner">
+    <meta property="og:description" content="Play the award-winning Ludum Dare 57 game with innovative mechanics and immersive storytelling.">
+    <meta property="og:image" content="https://beststickman.online/images/podvodsk-preview.jpg">
+    <meta property="og:url" content="https://beststickman.online/games/podvodsk/">
+    <meta property="og:type" content="game">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Podvodsk - Ludum Dare 57 Winner">
+    <meta name="twitter:description" content="Play the award-winning Ludum Dare 57 game with innovative mechanics and immersive storytelling.">
+    <meta name="twitter:image" content="https://beststickman.online/images/podvodsk-preview.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Podvodsk",
+        "description": "Award-winning Ludum Dare 57 game with innovative mechanics and immersive storytelling",
+        "url": "https://beststickman.online/games/podvodsk/",
+        "image": "https://beststickman.online/images/podvodsk-preview.jpg",
+        "genre": "Adventure",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "247"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            green: '#34C759',
+                            indigo: '#5856D6',
+                            orange: '#FF9500',
+                            pink: '#FF2D55',
+                            purple: '#AF52DE',
+                            red: '#FF3B30',
+                            teal: '#5AC8FA',
+                            yellow: '#FFCC00',
+                            gray: {
+                                light: '#F2F2F7',
+                                dark: '#1C1C1E'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-apple-gray-light dark:bg-apple-gray-dark text-gray-800 dark:text-white font-sans">
+    <!-- Header with Navigation -->
+    <header class="bg-apple-blue text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between mb-4 md:mb-0">
+                <h1 class="text-2xl md:text-3xl font-bold">
+                    <a href="/" class="no-underline hover:text-apple-yellow">🎮 BestGames Online</a>
+                </h1>
+                
+                <!-- Search Box -->
+                <div class="flex-1 max-w-md mx-4 hidden md:block">
+                    <div class="relative">
+                        <input type="text" id="gameSearch" placeholder="Search games..." 
+                               class="w-full px-4 py-2 pl-10 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-apple-yellow">
+                        <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex flex-wrap justify-center space-x-6">
+                <a href="/" class="hover:text-apple-yellow transition duration-300 font-medium">🏠 Home</a>
+                <div class="relative group">
+                    <a href="/categories/" class="hover:text-apple-yellow transition duration-300 font-medium">📁 Categories ▼</a>
+                    <div class="absolute top-full left-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-48">
+                        <a href="/categories/action/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-red hover:text-white rounded">⚡ Action</a>
+                        <a href="/categories/puzzle/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-teal hover:text-white rounded">🧩 Puzzle</a>
+                        <a href="/categories/strategy/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-blue hover:text-white rounded">🎯 Strategy</a>
+                        <a href="/categories/adventure/" class="block py-2 px-3 bg-apple-indigo text-white rounded">🗺️ Adventure</a>
+                        <a href="/categories/multiplayer/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-purple hover:text-white rounded">👥 Multiplayer</a>
+                        <a href="/categories/arcade/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-orange hover:text-white rounded">🕹️ Arcade</a>
+                        <a href="/categories/simulation/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-green hover:text-white rounded">🏗️ Simulation</a>
+                        <a href="/categories/rpg/" class="block py-2 px-3 text-gray-800 dark:text-white hover:bg-apple-pink hover:text-white rounded">⚔️ RPG</a>
+                    </div>
+                </div>
+                <a href="/trending/" class="hover:text-apple-yellow transition duration-300 font-medium">🔥 Trending</a>
+                <a href="/new/" class="hover:text-apple-yellow transition duration-300 font-medium">✨ New Games</a>
+                <a href="/top-rated/" class="hover:text-apple-yellow transition duration-300 font-medium">⭐ Top Rated</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumbs text-sm mb-6 text-gray-600 dark:text-gray-400">
+            <a href="/" class="hover:text-apple-blue">Home</a> &gt;
+            <a href="/categories/adventure/" class="hover:text-apple-blue">Adventure Games</a> &gt;
+            <span class="font-medium text-apple-indigo">Podvodsk</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <!-- Game Header -->
+                <div class="bg-gradient-to-r from-apple-indigo to-apple-purple rounded-lg p-8 text-white mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="text-6xl">🎮</div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-2">Podvodsk</h1>
+                            <p class="text-xl opacity-90">Ludum Dare 57 Winner</p>
+                            <div class="flex items-center gap-4 mt-3">
+                                <div class="flex items-center">
+                                    <span class="text-yellow-300 mr-1">⭐</span>
+                                    <span class="font-bold text-lg">4.8</span>
+                                    <span class="text-sm opacity-80 ml-1">(247 reviews)</span>
+                                </div>
+                                <div class="text-sm opacity-80">👥 18.5K plays</div>
+                                <div class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">🏆 Award Winner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Player -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-2xl font-bold text-apple-indigo">Play Podvodsk</h2>
+                        <div class="flex items-center gap-2">
+                            <button id="fullscreenBtn" class="bg-apple-indigo text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition duration-300">
+                                🔍 Fullscreen
+                            </button>
+                            <button id="favoriteBtn" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-apple-pink hover:text-white transition duration-300">
+                                ❤️ Favorite
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-container relative bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                        <iframe src="https://itch.io/embed-upload/11749806?color=5856D6" 
+                                allowfullscreen="" 
+                                width="100%" 
+                                height="500" 
+                                frameborder="0"
+                                class="w-full min-h-[500px]">
+                            <a href="https://korvd.itch.io/podvodsk">Play Podvodsk on itch.io</a>
+                        </iframe>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">
+                            Having issues? <a href="https://korvd.itch.io/podvodsk" target="_blank" class="text-apple-indigo hover:underline">Play on itch.io</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Game Description -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-apple-indigo">About Podvodsk</h2>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-lg mb-4">
+                            Podvodsk is the award-winning game from Ludum Dare 57, featuring innovative mechanics and immersive storytelling that captivated judges and players alike. This unique adventure combines atmospheric design with creative gameplay elements that push the boundaries of what's possible in a game jam entry.
+                        </p>
+                        <p class="mb-4">
+                            Set in a mysterious underwater world, Podvodsk challenges players to navigate through complex puzzles and environmental storytelling. The game's innovative approach to narrative delivery and its stunning visual presentation earned it top honors in the prestigious Ludum Dare competition.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <h3 class="text-lg font-bold mb-2 text-apple-blue">Key Features</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center"><span class="text-apple-green mr-2">✓</span> Award-winning design</li>
+                                    <li class="flex items-center"><span class="text-apple-green mr-2">✓</span> Innovative mechanics</li>
+                                    <li class="flex items-center"><span class="text-apple-green mr-2">✓</span> Immersive storytelling</li>
+                                    <li class="flex items-center"><span class="text-apple-green mr-2">✓</span> Atmospheric graphics</li>
+                                    <li class="flex items-center"><span class="text-apple-green mr-2">✓</span> Unique gameplay</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-2 text-apple-orange">Game Details</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><strong>Developer:</strong> Korvd</li>
+                                    <li><strong>Platform:</strong> Web Browser</li>
+                                    <li><strong>Release:</strong> Ludum Dare 57</li>
+                                    <li><strong>Genre:</strong> Adventure/Puzzle</li>
+                                    <li><strong>Play Time:</strong> 30-45 minutes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Play -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-apple-green">How to Play</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-bold mb-3 text-apple-blue">Controls</h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded mr-3 font-mono">W/A/S/D</span>
+                                    <span>Move character</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded mr-3 font-mono">SPACE</span>
+                                    <span>Interact/Action</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded mr-3 font-mono">MOUSE</span>
+                                    <span>Look around</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded mr-3 font-mono">ESC</span>
+                                    <span>Pause/Menu</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-3 text-apple-orange">Tips</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-apple-yellow mr-2 mt-1">💡</span>
+                                    <span>Explore every corner to find hidden secrets</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-apple-yellow mr-2 mt-1">💡</span>
+                                    <span>Pay attention to environmental storytelling</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-apple-yellow mr-2 mt-1">💡</span>
+                                    <span>Experiment with different interaction methods</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-apple-yellow mr-2 mt-1">💡</span>
+                                    <span>Take your time to appreciate the atmosphere</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-apple-purple">Screenshots</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <img src="/images/podvodsk-screenshot-1.jpg" alt="Podvodsk Screenshot 1" class="rounded-lg shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+                        <img src="/images/podvodsk-screenshot-2.jpg" alt="Podvodsk Screenshot 2" class="rounded-lg shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+                        <img src="/images/podvodsk-screenshot-3.jpg" alt="Podvodsk Screenshot 3" class="rounded-lg shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+                    </div>
+                </div>
+
+                <!-- Ratings and Reviews -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-apple-red">Rate This Game</h2>
+                    
+                    <!-- User Rating -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
+                        <h3 class="text-lg font-bold mb-3">Your Rating</h3>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div id="userRating" class="flex">
+                                <span class="star cursor-pointer text-2xl text-gray-300 hover:text-yellow-400" data-rating="1">⭐</span>
+                                <span class="star cursor-pointer text-2xl text-gray-300 hover:text-yellow-400" data-rating="2">⭐</span>
+                                <span class="star cursor-pointer text-2xl text-gray-300 hover:text-yellow-400" data-rating="3">⭐</span>
+                                <span class="star cursor-pointer text-2xl text-gray-300 hover:text-yellow-400" data-rating="4">⭐</span>
+                                <span class="star cursor-pointer text-2xl text-gray-300 hover:text-yellow-400" data-rating="5">⭐</span>
+                            </div>
+                            <span id="ratingText" class="ml-2 font-medium">Click to rate</span>
+                        </div>
+                        <textarea id="reviewText" placeholder="Write your review (optional)..." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-indigo dark:bg-gray-600 dark:border-gray-600" rows="3"></textarea>
+                        <button id="submitRating" class="mt-3 bg-apple-indigo text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition duration-300">
+                            Submit Rating
+                        </button>
+                    </div>
+
+                    <!-- Reviews Display -->
+                    <div id="reviewsContainer">
+                        <h3 class="text-lg font-bold mb-4">Player Reviews</h3>
+                        <div class="space-y-4" id="reviewsList">
+                            <!-- Reviews will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-apple-teal">Comments</h2>
+                    
+                    <!-- Comment Form -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
+                        <textarea id="commentText" placeholder="Share your thoughts about Podvodsk..." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-teal dark:bg-gray-600 dark:border-gray-600" rows="3"></textarea>
+                        <div class="flex items-center justify-between mt-3">
+                            <input type="text" id="commentName" placeholder="Your name (optional)" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-teal dark:bg-gray-600 dark:border-gray-600">
+                            <button id="submitComment" class="bg-apple-teal text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition duration-300">
+                                Post Comment
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Comments List -->
+                    <div id="commentsList" class="space-y-4">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Game Info -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold mb-4 text-apple-blue">Game Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="font-medium">Rating:</span>
+                            <span class="flex items-center">
+                                <span class="text-yellow-400 mr-1">⭐</span>
+                                <span class="font-bold">4.8/5</span>
+                            </span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Reviews:</span>
+                            <span>247</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Plays:</span>
+                            <span>18.5K</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Category:</span>
+                            <span>Adventure</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-medium">Developer:</span>
+                            <span>Korvd</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Sharing -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold mb-4 text-apple-green">Share This Game</h3>
+                    <div class="space-y-3">
+                        <button id="shareTwitter" class="w-full bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300">
+                            🐦 Share on Twitter
+                        </button>
+                        <button id="shareFacebook" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            📘 Share on Facebook
+                        </button>
+                        <button id="copyLink" class="w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300">
+                            🔗 Copy Link
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold mb-4 text-apple-orange">Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-apple-indigo bg-opacity-20 text-apple-indigo text-xs px-3 py-1 rounded-full">Adventure</span>
+                        <span class="bg-apple-purple bg-opacity-20 text-apple-purple text-xs px-3 py-1 rounded-full">Award Winner</span>
+                        <span class="bg-apple-blue bg-opacity-20 text-apple-blue text-xs px-3 py-1 rounded-full">Ludum Dare</span>
+                        <span class="bg-apple-green bg-opacity-20 text-apple-green text-xs px-3 py-1 rounded-full">Innovative</span>
+                        <span class="bg-apple-orange bg-opacity-20 text-apple-orange text-xs px-3 py-1 rounded-full">Storytelling</span>
+                        <span class="bg-apple-teal bg-opacity-20 text-apple-teal text-xs px-3 py-1 rounded-full">Atmospheric</span>
+                    </div>
+                </div>
+
+                <!-- Related Games -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold mb-4 text-apple-purple">Related Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/mistyhollow/" class="block">
+                            <div class="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300">
+                                <img src="/images/mistyhollow-thumb.jpg" alt="Misty Hollow" class="w-12 h-12 rounded object-cover">
+                                <div>
+                                    <h4 class="font-bold text-sm">Misty Hollow</h4>
+                                    <p class="text-xs text-gray-500">Halloween Adventure</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/categories/adventure/" class="block text-center">
+                            <div class="p-3 bg-apple-indigo bg-opacity-10 rounded-lg hover:bg-opacity-20 transition duration-300">
+                                <span class="text-apple-indigo font-medium">View More Adventure Games →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Games -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-lg font-bold mb-4 text-apple-red">Popular Games</h3>
+                    <div class="space-y-3">
+                        <a href="/trending/" class="block text-apple-red hover:underline">🔥 Trending Games</a>
+                        <a href="/new/" class="block text-apple-green hover:underline">✨ New Releases</a>
+                        <a href="/top-rated/" class="block text-apple-yellow hover:underline">⭐ Top Rated</a>
+                        <a href="/categories/multiplayer/" class="block text-apple-purple hover:underline">👥 Multiplayer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-apple-blue text-white py-8 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-xl font-bold mb-4">🎮 BestGames Online</h2>
+                    <p class="mb-4">Discover amazing indie games like Podvodsk. Play award-winning games from talented developers around the world.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Game Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/categories/adventure/" class="hover:text-apple-yellow transition duration-300">Adventure Games</a></li>
+                        <li><a href="/categories/puzzle/" class="hover:text-apple-yellow transition duration-300">Puzzle Games</a></li>
+                        <li><a href="/categories/action/" class="hover:text-apple-yellow transition duration-300">Action Games</a></li>
+                        <li><a href="/categories/multiplayer/" class="hover:text-apple-yellow transition duration-300">Multiplayer Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/help/" class="hover:text-apple-yellow transition duration-300">Help Center</a></li>
+                        <li><a href="/contact/" class="hover:text-apple-yellow transition duration-300">Contact Us</a></li>
+                        <li><a href="/developers/" class="hover:text-apple-yellow transition duration-300">For Developers</a></li>
+                        <li><a href="/privacy/" class="hover:text-apple-yellow transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blue-700 text-sm text-center">
+                <p>&copy; 2024 BestGames Online - Play Podvodsk and More Amazing Indie Games</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/game-page.js"></script>
+    <script>
+        // Initialize game page
+        document.addEventListener('DOMContentLoaded', function() {
+            const gamePage = new GamePage({
+                gameId: 'podvodsk',
+                title: 'Podvodsk',
+                category: 'adventure',
+                developer: 'Korvd'
+            });
+        });
+    </script>
+</body>
+</html> 
