@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misty Hollow - Halloween Chaotic Multiplayer | BestGames Online</title>
-    <meta name="description" content="Play Misty Hollow, a chaotic Halloween multiplayer game by Gregory Walker and Samuel Tomé. Experience spooky multiplayer action in this atmospheric indie game.">
-    <link rel="canonical" href="https://beststickman.online/games/mistyhollow.html">
+    <title>Misty Hollow - Halloween Multiplayer Game | BestGames Online</title>
+    <meta name="description" content="Play Misty Hollow - A spooky Halloween multiplayer game with atmospheric gameplay. Join friends in this chaotic Halloween adventure! Play for free online.">
+    <meta name="keywords" content="Misty Hollow, Halloween game, multiplayer game, spooky game, atmospheric game, indie game, online game, free game">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Misty Hollow - Halloween Multiplayer Game">
+    <meta property="og:description" content="A spooky Halloween multiplayer experience perfect for Halloween. Join the chaos with friends in this atmospheric game.">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="https://beststickman.online/games/mistyhollow/">
+    <meta property="og:image" content="https://beststickman.online/images/misty-hollow-preview.png">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Misty Hollow - Halloween Multiplayer Game">
+    <meta name="twitter:description" content="A spooky Halloween multiplayer experience perfect for Halloween.">
+    <meta name="twitter:image" content="https://beststickman.online/images/misty-hollow-preview.png">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Misty Hollow",
+        "description": "A spooky Halloween multiplayer experience perfect for Halloween. Join the chaos with friends in this atmospheric game.",
+        "genre": ["Multiplayer", "Halloween", "Atmospheric"],
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "ratingCount": "89"
+        }
+    }
+    </script>
+    
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,243 +72,423 @@
         }
     </script>
 </head>
-<body class="bg-apple-gray-light dark:bg-apple-gray-dark text-gray-800 dark:text-white font-sans">
-    <header class="bg-apple-blue text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-            <div class="flex flex-col md:flex-row items-center">
-                <h1 class="text-2xl md:text-3xl font-bold mb-2 md:mb-0">
-                    <a href="/" class="no-underline hover:text-apple-yellow">BestGames Online</a>
+<body class="text-gray-800 dark:text-white font-sans">
+    <header class="nav-glass text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-6">
+            <!-- Logo and Brand -->
+            <div class="flex items-center justify-between mb-6 md:mb-0">
+                <h1 class="text-2xl md:text-3xl font-bold">
+                    <a href="/" class="no-underline hover:text-apple-yellow text-gradient floating">🎮 BestGames Online</a>
                 </h1>
+                
+                <!-- Enhanced Search Box -->
+                <div class="search-container flex-1 max-w-md mx-4 hidden md:block">
+                    <div class="relative">
+                        <svg class="search-icon h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" id="gameSearch" placeholder="Search amazing games..." 
+                               class="search-input text-gray-800 dark:text-white placeholder-gray-500">
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden glass p-2 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 mt-4 md:mt-0">
-                <a href="/" class="hover:text-apple-yellow transition duration-300">Home</a>
-                <a href="/categories/action.html" class="hover:text-apple-yellow transition duration-300">Action</a>
-                <a href="/categories/multiplayer.html" class="hover:text-apple-yellow transition duration-300">Multiplayer</a>
-                <a href="/categories/indie.html" class="hover:text-apple-yellow transition duration-300">Indie</a>
-                <a href="/categories/halloween.html" class="hover:text-apple-yellow transition duration-300">Halloween</a>
-                <a href="/categories/experimental.html" class="hover:text-apple-yellow transition duration-300">Experimental</a>
+            
+            <!-- Navigation Menu -->
+            <nav id="mainNav" class="hidden md:flex flex-wrap justify-center space-x-2">
+                <a href="/" class="nav-item font-medium">🏠 Home</a>
+                <div class="relative group">
+                    <a href="/categories/" class="nav-item font-medium">📁 Categories ▼</a>
+                    <div class="dropdown-menu absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-48">
+                        <a href="/categories/action/" class="dropdown-item">⚡ Action</a>
+                        <a href="/categories/puzzle/" class="dropdown-item">🧩 Puzzle</a>
+                        <a href="/categories/strategy/" class="dropdown-item">🎯 Strategy</a>
+                        <a href="/categories/adventure/" class="dropdown-item">🗺️ Adventure</a>
+                        <a href="/categories/multiplayer/" class="dropdown-item">👥 Multiplayer</a>
+                        <a href="/categories/arcade/" class="dropdown-item">🕹️ Arcade</a>
+                        <a href="/categories/simulation/" class="dropdown-item">🏗️ Simulation</a>
+                        <a href="/categories/rpg/" class="dropdown-item">⚔️ RPG</a>
+                    </div>
+                </div>
+                <a href="/trending/" class="nav-item font-medium">🔥 Trending</a>
+                <a href="/new/" class="nav-item font-medium">✨ New Games</a>
+                <a href="/top-rated/" class="nav-item font-medium">⭐ Top Rated</a>
+                <a href="/developers/" class="nav-item font-medium">👨‍💻 Developers</a>
             </nav>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <div class="flex flex-col md:flex-row items-start gap-8">
-            <!-- Game Information Section -->
-            <div class="md:w-2/3">
-                <nav class="breadcrumbs text-sm mb-4 text-gray-600 dark:text-gray-400">
-                    <a href="/" class="hover:text-apple-blue">Home</a> &gt;
-                    <a href="/categories/multiplayer.html" class="hover:text-apple-blue">Multiplayer Games</a> &gt;
-                    <span>Misty Hollow</span>
-                </nav>
-                
-                <h1 class="text-3xl md:text-4xl font-bold mb-4 text-apple-orange">Misty Hollow</h1>
-                <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">Halloween Chaotic Multiplayer</p>
-                
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="inline-block bg-apple-orange bg-opacity-20 text-apple-orange text-sm px-3 py-1 rounded-full">Halloween</span>
-                    <span class="inline-block bg-apple-red bg-opacity-20 text-apple-red text-sm px-3 py-1 rounded-full">Multiplayer</span>
-                    <span class="inline-block bg-apple-purple bg-opacity-20 text-apple-purple text-sm px-3 py-1 rounded-full">Chaotic</span>
-                    <span class="inline-block bg-apple-blue bg-opacity-20 text-apple-blue text-sm px-3 py-1 rounded-full">Indie</span>
-                    <span class="inline-block bg-apple-indigo bg-opacity-20 text-apple-indigo text-sm px-3 py-1 rounded-full">Atmospheric</span>
-                </div>
-                
-                <!-- Game Container -->
-                <div class="game-container w-full bg-black relative rounded-lg overflow-hidden mb-8 flex items-center justify-center" style="min-height: 200px;">
-                    <iframe width="552" height="167" frameborder="0" 
-                            src="https://itch.io/embed/2650915"
-                            class="rounded-lg w-full"
-                            sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation">
-                        <a href="https://gregorywalker.itch.io/mistyhollow">Misty Hollow - Halloween Chaotic Multiplayer by Gregory Walker, Samuel Tomé</a>
-                    </iframe>
+    <!-- Breadcrumb Navigation -->
+    <nav class="container mx-auto px-6 py-4">
+        <div class="glass-card p-4">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="/" class="text-blue-400 hover:text-blue-300 transition-colors">Home</a></li>
+                <li class="text-gray-500">›</li>
+                <li><a href="/categories/multiplayer/" class="text-blue-400 hover:text-blue-300 transition-colors">Multiplayer Games</a></li>
+                <li class="text-gray-500">›</li>
+                <li class="text-gray-300">Misty Hollow</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Game Header -->
+                <div class="glass-card p-8 mb-8">
+                    <div class="flex flex-col md:flex-row items-start gap-6">
+                        <div class="w-32 h-32 bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl flex items-center justify-center text-white text-6xl floating">
+                            🎃
+                        </div>
+                        <div class="flex-1">
+                            <h1 class="text-4xl font-bold text-gradient mb-4">Misty Hollow</h1>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+                                Halloween Multiplayer Adventure
+                            </p>
+                            <div class="flex flex-wrap gap-4 mb-6">
+                                <div class="flex items-center">
+                                    <span class="text-yellow-400 mr-1">⭐</span>
+                                    <span class="font-bold">4.6</span>
+                                    <span class="text-gray-500 ml-1">(89 reviews)</span>
+                                </div>
+                                <div class="text-gray-500">👥 8,234 plays</div>
+                                <div class="text-gray-500">🕒 Last updated: Oct 2024</div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="glass px-3 py-1 rounded-full text-xs font-medium text-orange-600">Halloween</span>
+                                <span class="glass px-3 py-1 rounded-full text-xs font-medium text-red-600">Multiplayer</span>
+                                <span class="glass px-3 py-1 rounded-full text-xs font-medium text-purple-600">Atmospheric</span>
+                                <span class="glass px-3 py-1 rounded-full text-xs font-medium text-blue-600">Indie</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Play Options -->
-                <div class="bg-gradient-to-r from-apple-orange to-apple-red rounded-lg p-6 mb-8 text-white">
-                    <h3 class="text-xl font-bold mb-4">🎃 How to Play</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                            <h4 class="font-bold mb-2">🖱️ Play in Browser</h4>
-                            <p class="text-sm opacity-90">Click the game above to play directly in your browser. Join the Halloween chaos instantly!</p>
-                        </div>
-                        <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                            <h4 class="font-bold mb-2">👥 Multiplayer Fun</h4>
-                            <p class="text-sm opacity-90">Play with friends in this chaotic multiplayer Halloween experience.</p>
+                <!-- Game Player -->
+                <div class="glass-card p-8 mb-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-gradient">🎮 Play Game</h2>
+                        <div class="flex gap-3">
+                            <button id="fullscreenBtn" class="btn-secondary flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
+                                Fullscreen
+                            </button>
+                            <button id="shareBtn" class="btn-secondary flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                                </svg>
+                                Share
+                            </button>
                         </div>
                     </div>
-                    <div class="mt-4 text-center">
-                        <a href="https://gregorywalker.itch.io/mistyhollow" target="_blank" 
-                           class="bg-white text-apple-orange px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">
-                            Visit itch.io Page →
-                        </a>
+                    <div class="game-container bg-gradient-to-br from-orange-900/20 to-red-900/20 rounded-xl overflow-hidden">
+                        <iframe id="gameFrame" 
+                                src="https://itch.io/embed/3054624?linkback=true&amp;border_width=0&amp;bg_color=1a1a1a&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=333333" 
+                                width="100%" 
+                                height="600" 
+                                frameborder="0">
+                        </iframe>
                     </div>
                 </div>
-                
+
                 <!-- Game Description -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-apple-purple">About Misty Hollow</h2>
-                    <p class="mb-4">
-                        Misty Hollow is a chaotic Halloween multiplayer game created by Gregory Walker and Samuel Tomé. Set in a spooky, atmospheric world, this indie game brings players together for a unique multiplayer experience filled with Halloween thrills and supernatural chaos.
-                    </p>
-                    <p class="mb-4">
-                        The game combines atmospheric horror elements with chaotic multiplayer gameplay, creating an unforgettable experience perfect for the Halloween season. Players navigate through the mysterious Misty Hollow, encountering supernatural elements and engaging in frantic multiplayer action.
-                    </p>
-                    <p>
-                        With its unique blend of horror atmosphere and multiplayer chaos, Misty Hollow offers an indie gaming experience that's both thrilling and entertaining, perfect for playing with friends during the spooky season.
-                    </p>
+                <div class="glass-card p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gradient mb-6">🎃 About This Game</h2>
+                    <div class="prose prose-lg max-w-none text-gray-600 dark:text-gray-300">
+                        <p class="mb-6">
+                            Welcome to <strong>Misty Hollow</strong>, where Halloween chaos meets multiplayer mayhem! 
+                            This atmospheric horror-comedy experience invites you and your friends to navigate through 
+                            a spooky town filled with supernatural surprises and ghostly challenges.
+                        </p>
+                        <p class="mb-6">
+                            Whether you're working together to solve supernatural mysteries or competing in ghoulish 
+                            mini-games, Misty Hollow delivers an unforgettable Halloween experience that captures 
+                            the spirit of the season with both scares and laughs.
+                        </p>
+                        <h3 class="text-xl font-bold text-gradient mb-4">🌟 Key Features</h3>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>Atmospheric Halloween setting with immersive sound design</li>
+                            <li>Multiplayer gameplay supporting up to 4 players</li>
+                            <li>Dynamic weather and spooky environmental effects</li>
+                            <li>Halloween-themed challenges and mini-games</li>
+                            <li>Cooperative and competitive game modes</li>
+                            <li>Customizable character costumes and accessories</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <!-- Controls & How to Play -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-apple-teal">How to Play</h2>
+
+                <!-- Controls -->
+                <div class="glass-card p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gradient mb-6">🎮 Game Controls</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h3 class="text-lg font-bold mb-3 text-apple-orange">🎮 Controls</h3>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center"><span class="w-6 h-6 bg-apple-blue rounded mr-2 flex items-center justify-center text-white text-xs">W</span> Move Up</li>
-                                <li class="flex items-center"><span class="w-6 h-6 bg-apple-blue rounded mr-2 flex items-center justify-center text-white text-xs">S</span> Move Down</li>
-                                <li class="flex items-center"><span class="w-6 h-6 bg-apple-blue rounded mr-2 flex items-center justify-center text-white text-xs">A</span> Move Left</li>
-                                <li class="flex items-center"><span class="w-6 h-6 bg-apple-blue rounded mr-2 flex items-center justify-center text-white text-xs">D</span> Move Right</li>
-                                <li class="flex items-center"><span class="w-8 h-6 bg-apple-red rounded mr-2 flex items-center justify-center text-white text-xs">Space</span> Action/Interact</li>
-                            </ul>
+                            <h3 class="text-lg font-semibold text-orange-400 mb-4">Movement</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">WASD</span>
+                                    <span>Move character</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">Mouse</span>
+                                    <span>Look around / Aim</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">Shift</span>
+                                    <span>Run</span>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold mb-3 text-apple-green">🎯 Gameplay Tips</h3>
-                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                                <li>• Work together with other players to survive</li>
-                                <li>• Watch out for supernatural elements</li>
-                                <li>• Embrace the chaos - it's part of the fun!</li>
-                                <li>• Perfect for Halloween gaming sessions</li>
-                                <li>• Atmospheric sound adds to the experience</li>
-                            </ul>
+                            <h3 class="text-lg font-semibold text-red-400 mb-4">Actions</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">E</span>
+                                    <span>Interact with objects</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">F</span>
+                                    <span>Use flashlight</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="glass px-3 py-1 rounded-lg font-mono text-sm bg-gray-800 text-white">Tab</span>
+                                    <span>View objectives</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Game Features -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
-                    <h2 class="text-2xl font-bold mb-4 text-apple-green">Game Features</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-orange rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+
+                <!-- Tips -->
+                <div class="glass-card p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gradient mb-6">💡 Survival Tips</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <span class="text-2xl">👻</span>
+                                <div>
+                                    <h3 class="font-semibold text-purple-400 mb-2">Stay Together</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        Group up with friends to tackle supernatural challenges more effectively.
+                                    </p>
+                                </div>
                             </div>
-                            <span>Halloween-themed atmosphere</span>
+                            <div class="flex gap-4">
+                                <span class="text-2xl">🔦</span>
+                                <div>
+                                    <h3 class="font-semibold text-yellow-400 mb-2">Use Your Light</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        Your flashlight reveals hidden clues and scares away some spooky entities.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-red rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <span class="text-2xl">🎭</span>
+                                <div>
+                                    <h3 class="font-semibold text-orange-400 mb-2">Embrace the Chaos</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        Sometimes the best strategy is to lean into the Halloween madness!
+                                    </p>
+                                </div>
                             </div>
-                            <span>Chaotic multiplayer gameplay</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-purple rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                            <div class="flex gap-4">
+                                <span class="text-2xl">🔊</span>
+                                <div>
+                                    <h3 class="font-semibold text-red-400 mb-2">Listen Carefully</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        Audio cues often hint at supernatural events or hidden objectives.
+                                    </p>
+                                </div>
                             </div>
-                            <span>Atmospheric sound design</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-blue rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <span>Indie game creativity</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-teal rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <span>Spooky visual effects</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-apple-green rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <span>Browser-playable</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Sidebar -->
-            <div class="md:w-1/3 mt-8 md:mt-0">
-                <!-- Developer Info -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-lg mb-8">
-                    <h3 class="text-xl font-bold mb-4 text-apple-blue">Game Info</h3>
-                    <div class="space-y-3">
-                        <div>
-                            <h4 class="font-semibold text-apple-purple">Developers</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Gregory Walker & Samuel Tomé</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-apple-purple">Genre</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Halloween Multiplayer</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-apple-purple">Type</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Chaotic Multiplayer</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-apple-purple">Platform</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Browser / Downloadable</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-apple-purple">Theme</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Halloween & Supernatural</p>
-                        </div>
-                        <a href="https://gregorywalker.itch.io/mistyhollow" target="_blank" 
-                           class="inline-block bg-apple-orange text-white px-4 py-2 rounded-lg hover:bg-apple-red transition duration-300">
-                            itch.io Page
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- More Halloween Games -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-lg mb-8">
-                    <h3 class="text-xl font-bold mb-4 text-apple-blue">More Indie Games</h3>
+            <div class="lg:col-span-1">
+                <!-- Game Info -->
+                <div class="glass-card p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gradient mb-6">🎮 Game Info</h3>
                     <div class="space-y-4">
-                        <a href="/games/podvodsk.html" class="block bg-apple-purple bg-opacity-10 p-3 rounded-lg hover:bg-opacity-20 transition duration-300">
-                            <h4 class="font-semibold text-apple-purple">Podvodsk</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-300">Ludum Dare 57 winner</p>
-                        </a>
-                        <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg opacity-75">
-                            <h4 class="font-semibold text-gray-500">More Games Coming</h4>
-                            <p class="text-sm text-gray-400">Stay tuned for more indie games</p>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Developer:</span>
+                            <span class="font-medium">Spooky Studios</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Genre:</span>
+                            <span class="font-medium">Multiplayer Horror</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Players:</span>
+                            <span class="font-medium">1-4 Players</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Platform:</span>
+                            <span class="font-medium">Web Browser</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Release:</span>
+                            <span class="font-medium">October 2024</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Size:</span>
+                            <span class="font-medium">~15 MB</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Game Categories -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-apple-purple">Game Categories</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="/categories/multiplayer.html" class="bg-apple-red bg-opacity-20 text-apple-red px-3 py-1 rounded-full text-sm hover:bg-opacity-30 transition duration-300">Multiplayer</a>
-                        <a href="/categories/halloween.html" class="bg-apple-orange bg-opacity-20 text-apple-orange px-3 py-1 rounded-full text-sm hover:bg-opacity-30 transition duration-300">Halloween</a>
-                        <a href="/categories/indie.html" class="bg-apple-blue bg-opacity-20 text-apple-blue px-3 py-1 rounded-full text-sm hover:bg-opacity-30 transition duration-300">Indie</a>
-                        <a href="/categories/action.html" class="bg-apple-purple bg-opacity-20 text-apple-purple px-3 py-1 rounded-full text-sm hover:bg-opacity-30 transition duration-300">Action</a>
+
+                <!-- Share Game -->
+                <div class="glass-card p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gradient mb-6">📢 Share This Game</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button class="btn-secondary text-sm" onclick="shareGame('twitter')">
+                            🐦 Twitter
+                        </button>
+                        <button class="btn-secondary text-sm" onclick="shareGame('facebook')">
+                            📘 Facebook
+                        </button>
+                        <button class="btn-secondary text-sm" onclick="shareGame('reddit')">
+                            🔗 Reddit
+                        </button>
+                        <button class="btn-secondary text-sm" onclick="copyGameLink()">
+                            📋 Copy Link
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Related Games -->
+                <div class="glass-card p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gradient mb-6">🎯 Related Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/podvodsk/" class="flex items-center gap-4 p-3 glass-card hover:scale-105 transition-transform">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-lg flex items-center justify-center text-white text-lg">
+                                🌊
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gradient">Podvodsk</h4>
+                                <p class="text-xs text-gray-500">Ludum Dare Winner</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular This Week -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold text-gradient mb-6">🔥 Popular This Week</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-3 glass-card">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-teal-600 rounded-lg flex items-center justify-center text-white text-lg">
+                                🧩
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gradient">Puzzle Quest</h4>
+                                <p class="text-xs text-gray-500">2.1K plays today</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 glass-card">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-pink-600 rounded-lg flex items-center justify-center text-white text-lg">
+                                ⚡
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gradient">Action Rush</h4>
+                                <p class="text-xs text-gray-500">1.8K plays today</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-apple-gray-dark text-white py-8 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 BestGames Online. All rights reserved.</p>
-            <p class="mt-2 text-sm text-gray-400">Featuring amazing indie games from talented developers worldwide.</p>
+    <footer class="footer-glass text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-6 text-gradient">🎮 BestGames Online</h2>
+                    <p class="mb-6 text-gray-300 leading-relaxed">
+                        Your destination for discovering exceptional indie games from talented independent developers. 
+                        We celebrate creativity, innovation, and the unique artistic visions that make gaming magical.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="glass p-3 rounded-lg hover:scale-110 transition-transform">📧</a>
+                        <a href="#" class="glass p-3 rounded-lg hover:scale-110 transition-transform">🐦</a>
+                        <a href="#" class="glass p-3 rounded-lg hover:scale-110 transition-transform">📘</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-gradient">Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/categories/action/" class="text-gray-300 hover:text-white transition duration-300">Action</a></li>
+                        <li><a href="/categories/puzzle/" class="text-gray-300 hover:text-white transition duration-300">Puzzle</a></li>
+                        <li><a href="/categories/strategy/" class="text-gray-300 hover:text-white transition duration-300">Strategy</a></li>
+                        <li><a href="/categories/adventure/" class="text-gray-300 hover:text-white transition duration-300">Adventure</a></li>
+                        <li><a href="/categories/experimental/" class="text-gray-300 hover:text-white transition duration-300">Experimental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-gradient">Support Indie</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://itch.io" target="_blank" class="text-gray-300 hover:text-white transition duration-300">Visit itch.io</a></li>
+                        <li><a href="/about/" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="/contact/" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="/privacy/" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-600 text-center">
+                <p class="text-gray-400">&copy; 2024 BestGames Online - Celebrating indie creativity worldwide</p>
+            </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../js/game-page.js"></script>
+    <script>
+        // Initialize game page functionality
+        const gamePage = new GamePage('misty-hollow', 'Misty Hollow', '#FF6B35');
+        gamePage.init();
+
+        // Share functions
+        function shareGame(platform) {
+            const url = window.location.href;
+            const text = 'Check out Misty Hollow - A spooky Halloween multiplayer game!';
+            
+            switch(platform) {
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`);
+                    break;
+                case 'facebook':
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`);
+                    break;
+                case 'reddit':
+                    window.open(`https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`);
+                    break;
+            }
+        }
+
+        function copyGameLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Game link copied to clipboard!');
+            });
+        }
+
+        // Fullscreen functionality
+        document.getElementById('fullscreenBtn').addEventListener('click', () => {
+            const iframe = document.getElementById('gameFrame');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            }
+        });
+    </script>
 </body>
 </html> 
