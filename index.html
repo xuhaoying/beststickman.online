@@ -65,60 +65,107 @@
             </div>
         </section>
 
-        <section id="featured" class="my-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-apple-orange border-b pb-2">Featured Games</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Featured Game 1 - Main Feature -->
-                <div class="lg:col-span-2">
-                    <a href="/games/podvodsk.html" class="block bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
-                        <div class="md:flex">
-                            <div class="md:w-1/2 relative pb-[60%] md:pb-0 md:h-64">
-                                <div class="absolute inset-0 bg-gradient-to-br from-apple-purple to-apple-blue flex items-center justify-center">
-                                    <div class="text-white text-center">
-                                        <h3 class="text-2xl font-bold mb-2">Podvodsk</h3>
-                                        <p class="text-lg">Ludum Dare 57</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="md:w-1/2 p-6">
-                                <h3 class="text-xl font-bold text-apple-blue mb-2">Podvodsk (Ludum Dare 57)</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">An innovative indie game created for Ludum Dare 57 by the talented Four Quarters team. Experience unique gameplay mechanics and immersive storytelling.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-block bg-apple-teal bg-opacity-20 text-apple-teal text-xs px-2 py-1 rounded">Puzzle</span>
-                                    <span class="inline-block bg-apple-purple bg-opacity-20 text-apple-purple text-xs px-2 py-1 rounded">Indie</span>
-                                    <span class="inline-block bg-apple-orange bg-opacity-20 text-apple-orange text-xs px-2 py-1 rounded">Ludum Dare</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Coming Soon Placeholders -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                    <div class="relative pb-[60%] bg-gradient-to-br from-apple-gray-light to-gray-300 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-                        <div class="text-center text-gray-500 dark:text-gray-400">
-                            <h3 class="text-lg font-bold mb-1">More Games Coming Soon</h3>
-                            <p class="text-sm">We're curating amazing indie games</p>
+        <!-- Featured Games Hero Section -->
+        <section class="hero-games mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-apple-blue">🎮 Play Amazing Open Source Games</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Discover free, open-source games that run directly in your browser - no downloads, no redirects!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sokoban - Featured -->
+                <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 lg:col-span-1">
+                    <div class="game-image bg-gradient-to-br from-apple-teal to-apple-blue h-56 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-8xl mb-4">📦</div>
+                            <h3 class="text-2xl font-bold">Sokoban</h3>
+                            <p class="text-lg">Classic Puzzle</p>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-500 dark:text-gray-400 mb-1">New Indie Game</h3>
-                        <p class="text-gray-400 dark:text-gray-500 text-sm mb-2">Exciting indie game coming soon</p>
-                        <span class="inline-block bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400 text-xs px-2 py-1 rounded">Coming Soon</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-apple-teal">Master the Warehouse</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Push boxes to their target positions in this legendary puzzle game. Simple rules, challenging solutions!</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-apple-teal bg-opacity-20 text-apple-teal text-xs px-2 py-1 rounded-full">Puzzle</span>
+                            <span class="bg-apple-purple bg-opacity-20 text-apple-purple text-xs px-2 py-1 rounded-full">Classic</span>
+                            <span class="bg-apple-green bg-opacity-20 text-apple-green text-xs px-2 py-1 rounded-full">Open Source</span>
+                        </div>
+                        <a href="/games/sokoban.html" class="bg-apple-teal text-white px-6 py-3 rounded-lg hover:bg-apple-blue transition duration-300 inline-block font-semibold">Play Now</a>
                     </div>
                 </div>
-                
-                <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                    <div class="relative pb-[60%] bg-gradient-to-br from-apple-gray-light to-gray-300 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-                        <div class="text-center text-gray-500 dark:text-gray-400">
-                            <h3 class="text-lg font-bold mb-1">More Games Coming Soon</h3>
-                            <p class="text-sm">We're curating amazing indie games</p>
+
+                <!-- Open Hexagon - Featured -->
+                <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="game-image bg-gradient-to-br from-apple-purple to-apple-pink h-56 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-8xl mb-4">⬡</div>
+                            <h3 class="text-2xl font-bold">Open Hexagon</h3>
+                            <p class="text-lg">Geometric Rush</p>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-500 dark:text-gray-400 mb-1">Another Indie Game</h3>
-                        <p class="text-gray-400 dark:text-gray-500 text-sm mb-2">Amazing indie experience coming soon</p>
-                        <span class="inline-block bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400 text-xs px-2 py-1 rounded">Coming Soon</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-apple-purple">Dodge the Chaos</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Navigate through intense geometric patterns in this adrenaline-pumping arcade challenge!</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-apple-purple bg-opacity-20 text-apple-purple text-xs px-2 py-1 rounded-full">Arcade</span>
+                            <span class="bg-apple-red bg-opacity-20 text-apple-red text-xs px-2 py-1 rounded-full">Fast-Paced</span>
+                            <span class="bg-apple-pink bg-opacity-20 text-apple-pink text-xs px-2 py-1 rounded-full">Rhythm</span>
+                        </div>
+                        <a href="/games/openhexagon.html" class="bg-apple-purple text-white px-6 py-3 rounded-lg hover:bg-apple-pink transition duration-300 inline-block font-semibold">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Dungeon Crawlers - Featured -->
+                <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="game-image bg-gradient-to-br from-apple-green to-apple-orange h-56 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-8xl mb-4">🏰</div>
+                            <h3 class="text-2xl font-bold">Dungeon Crawlers</h3>
+                            <p class="text-lg">RPG Adventure</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-apple-green">Explore the Unknown</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Battle monsters and collect treasures in this classic dungeon-exploring RPG adventure!</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-apple-green bg-opacity-20 text-apple-green text-xs px-2 py-1 rounded-full">Adventure</span>
+                            <span class="bg-apple-purple bg-opacity-20 text-apple-purple text-xs px-2 py-1 rounded-full">RPG</span>
+                            <span class="bg-apple-orange bg-opacity-20 text-apple-orange text-xs px-2 py-1 rounded-full">Retro</span>
+                        </div>
+                        <a href="/games/dungeoncrawlers.html" class="bg-apple-green text-white px-6 py-3 rounded-lg hover:bg-apple-teal transition duration-300 inline-block font-semibold">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Open Source Games Section -->
+        <section class="open-source-benefits mb-16">
+            <div class="bg-gradient-to-r from-apple-blue to-apple-purple rounded-lg p-8 text-white">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4">✨ Why Open Source Games?</h2>
+                    <p class="text-xl opacity-90">Experience gaming freedom with no restrictions, no ads, and no downloads required!</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🚀</div>
+                        <h3 class="text-lg font-bold mb-2">Instant Play</h3>
+                        <p class="text-sm opacity-80">No downloads, no installations. Click and play immediately!</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🔓</div>
+                        <h3 class="text-lg font-bold mb-2">Always Free</h3>
+                        <p class="text-sm opacity-80">100% free forever. No hidden costs or premium features.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🛡️</div>
+                        <h3 class="text-lg font-bold mb-2">No Ads</h3>
+                        <p class="text-sm opacity-80">Pure gaming experience without interruptions.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🌐</div>
+                        <h3 class="text-lg font-bold mb-2">Browser Native</h3>
+                        <p class="text-sm opacity-80">Runs directly in your browser, on any device.</p>
                     </div>
                 </div>
             </div>
